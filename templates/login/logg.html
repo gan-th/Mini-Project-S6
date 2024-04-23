@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>login and sign up page</title>
+  <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?
+   family=Material+Symbols+Rounded:opsz,wght,FILL,GRADE@48,400,0,0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+     
+      <a href="#" class ="logo">
+        <img src="images/logo.jpg" alt="logo">
+        <h2>Stonks</h2>
+      </a>
+      <ul class="links">
+       
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Search</a></li>
+        <li><a href="#">Watchlist</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="login-btn">LOG IN</button>
+    </nav>
+  </header>
+  <!--popup-->
+  <div class="blur-bg-overlay">
+  <div class="form-popup">
+    <span class="close-btn material-symbols-rounded">&times;</span>
+    <div class="form-box login">
+      <div class="form-details">
+        <h2>Hi there!!</h2>
+        <p>Welcome back to Stonks, </p>
+        <p>Please login to continue</p>
+      </div>
+      <div class="form-content">
+        <h2>LOGIN</h2>
+        <form action="#">
+          <div class="input-field">
+              <input type="text" required>
+              <label>Email</label>
+          </div>
+          <div class="input-field">
+              <input type="password" required>
+              <label>Password</label>
+          </div>
+          <a href="#" class="forgot-pass">Forgot password?</a>
+          <button type="submit">Log In</button>
+        </form>
+        <div class="bottom-link">
+          Dont't have an account?<a href="#" id="signup-link">Signup</a>
+        </div>
+      </div>
+    </div>
+    <div class="form-box signup">
+      <div class="form-details">
+        <h2>Create Account</h2>
+        <p>To become a part of our community,</p>
+        <p>please signup using your personal information</p>
+      </div>
+      <div class="form-content">
+        <h2>SIGNUP</h2>
+        <form action="#">
+          <div class="input-field">
+              <input type="text" required>
+              <label>Enter your email</label>
+          </div>
+          <div class="input-field">
+              <input type="password" required>
+              <label>Create password</label>
+          </div>
+          <div class="policy-text">
+            <input type="checkbox" id="policy">
+            <label for="policy">I agree to all <a href="#">terms & conditions</a>
+            </label>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <div class="bottom-link">
+          Alredy have an account?<a href="#" id="login-link">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

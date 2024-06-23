@@ -215,7 +215,7 @@ def my_cron_job():
 # my_cron_job()
 # print(nifty_companies)
 skip=True
-if  not skip:
+if  skip:
     my_cron_job()
     file_1 = open('C:/Users/Kevin Jacob/Desktop/Project/data.txt', 'wt',encoding='utf-8') 
     file_1.write(str(nifty_companies))

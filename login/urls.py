@@ -19,8 +19,18 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-   path('', views.home,name="home"),
-   path('signin',views.signin,name="signin"),
-   path('signup',views.signup,name="signup"),
+   #path('signin',views.signin,name="signin"),
+   #path('signup',views.signup,name="signup"),
+   #path('login/', include('login.urls')),
    path('signout',views.signout,name="signout"),
+   path('log_m',views.log,name="log_m"),
+   path('log_error',views.log,name="log_error"),
+   path('sign_m',views.sign_m,name="sign_m"),
+   path('dashboard',views.dashboard,name="dashboard"),
+   path('about',views.about,name="about"),
+   path('model',views.model,name="model"),
+   path('search',views.search,name="search"),
+   path('contact',views.contact,name="contact"),
+   path('User_Profile',views.User_Profile,name="User_Profile"),
+   path('', views.log,name="home"),
 ]

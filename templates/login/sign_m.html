@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sign Up</title>
+  <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="wrapper">
+      <h1>Sign Up</h1>
+      <form action="/sign_m" method="post">
+        {% csrf_token %}
+            <div class="input-box">
+                <label for="">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                {% comment %} <i class='bx bxs-user'></i> {% endcomment %}
+            </div>
+            <div class="input-box">
+                <label for="">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter your first name" Required>
+                {% comment %} <i class='bx bxs-user'></i> {% endcomment %}
+            </div>
+            <div class="input-box">
+                <label for="">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Enter your last name" Required>
+                {% comment %} <i class='bx bxs-user'></i> {% endcomment %}
+            </div>
+            <div class="input-box">
+                <label for="">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" Required>
+                {% comment %} <i class='bx bxs-user'></i> {% endcomment %}
+            </div>
+            <div class="input-box">
+                <label for="">Password</label>
+                <input type="password" id="pass1" name="pass1" placeholder="Enter Password" required>
+                {% comment %} <i class='bx bxs-lock-alt'></i> {% endcomment %}
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="register-link">
+                <p>Already have an account?
+                    <a href="log_m">Login</a></p>
+                </div>
+    </div>
+    
+</body>
+
+</html>

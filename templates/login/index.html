@@ -13,10 +13,16 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+    
         <h3>Welcome to Stonks</h3>
+        {% if user.is_authenticated %}
+        <button type='submit'><a href="/signout"> Signout</a> </button>
+        {% else %}
         <button type='submit'> <a href="/signup"> Signup</a> </button>
         <button type='submit'><a href="/signin"> Signin</a> </button>
-        <button type='submit'><a href="/signout"> Signout</a> </button>
+        {% endif %}
+
+
         <script src="" async defer></script>
     </body>
 </html>

@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'django_celery_beat',
+    'login',
 ]
 
 MIDDLEWARE = [
@@ -119,5 +121,37 @@ STATIC_URL = "static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# settings.py
+
+# Use database for sessions
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+# You might also want to set a session cookie age
+SESSION_COOKIE_AGE = 1209600  # Two weeks in seconds
+
+
+# # CRONJOBS = [
+# # ('0 16 * * * *', 'login.cronjob.my_cron_job')
+# # ]
+# # gfg/settings.py
+
+# CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Example using Redis as the broker
+# CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+# CELERY_ACCEPT_CONTENT = ['json']
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_RESULT_SERIALIZER = 'json'
+# CELERY_TIMEZONE = 'UTC'
+
+# from celery.schedules import crontab
+
+# CELERY_BEAT_SCHEDULE = {
+#     'my-cron-job': {
+#         'task': 'login.cronjob.my_cron_job',
+#         'schedule': crontab(minute=0, hour=0),
+#     },
+# }
+

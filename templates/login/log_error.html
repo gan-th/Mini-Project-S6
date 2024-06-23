@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Login</title>
+  <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="wrapper">
+      <h1>Login</h1>
+      <form action="/log_m" method="post">
+        {% csrf_token %}
+        <div class="input-box">
+            <label for="">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+            {% comment %} <i class='bx bxs-user'></i> {% endcomment %}
+        </div>
+        <div class="input-box">
+            <label for="">Password</label>
+            <input type="password" id="pass1" name="pass1" placeholder="Enter Password" required>
+            {% comment %} <i class='bx bxs-lock-alt'></i> {% endcomment %}
+        </div>
+        <div class="remember-forgot">
+            <label>
+                <input type="checkbox">Remember me
+            </label>
+            <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="register-link">
+            <p>Don't have an account?
+                <a href="sign_m">Register</a></p>
+            </div>
+    </div>
+</body>
+
+</html>

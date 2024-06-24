@@ -18,7 +18,7 @@ nifty_companies = {'Asian Paints':['ASIANPAINT.NS','Asian Paints Ltd is an India
                    'Britannia Industries Limited':['BRITANNIA.NS','Britannia Industries Limited is an Indian multinational food products company, which sells biscuits, breads and dairy products. Founded in 1892, it is one of India oldest existing companies and currently part of the Wadia Group headed by Nusli Wadia. As of 2023, about 80% of its revenues came from biscuit products','1892','163 billion INR','537 Cr',0,0,'text','text','text'],
                    'Nestlé India Limited':['NESTLEIND.NS','Nestlé India Limited is the Indian subsidiary of Nestlé which is a Swiss multinational company. The company is headquartered in Gurgaon, Haryana. The company products include food, beverages, chocolate, and confectioneries','1959','192.5 billion INR','934 Cr',0,0,'text','text','text'],
                    'Hindalco Industries Limited':['HINDALCO.NS','Hindalco Industries Limited an Indian aluminium and copper manufacturing company, is a subsidiary of the Aditya Birla Group. Its headquarters are at Mumbai, Maharashtra, India. The company is listed in the Forbes Global 2000 at 661st rank. Its market capitalisation by the end of November 2023 was US$15.6 billion','1958','2.245 trillion INR','2,331 Cr',0,0,'text','text','text'],
-                   'Larsen & Toubro Limited':['LT.NS','Larsen & Toubro Limited, abbreviated as L&T, is an Indian multinational conglomerate, with interests in industrial technology, heavy industry, engineering, construction, manufacturing, power, information technology, military and financial services. It is headquartered in Mumbai, Maharashtra','1946','2.253 trillion INR','5,013 Cr',0,0,'text','text','text'],
+                   'Larsen &amp; Toubro Limited':['LT.NS','Larsen & Toubro Limited, abbreviated as L&T, is an Indian multinational conglomerate, with interests in industrial technology, heavy industry, engineering, construction, manufacturing, power, information technology, military and financial services. It is headquartered in Mumbai, Maharashtra','1946','2.253 trillion INR','5,013 Cr',0,0,'text','text','text'],
                    'Tata Consumer Products Limited':['TATACONSUM.NS','Tata Consumer Products is an Indian fast-moving consumer goods company and a part of the Tata Group. Its registered office is located in Kolkata while its corporate headquarters is in Mumbai. It is the worlds second-largest manufacturer and distributor of tea and a major producer of coffee','1962','154.5 billion INR','212 Cr',0,0,'text','text','text'],
                    'Wipro Limited':['WIPRO.NS','Wipro Limited is an Indian multinational corporation that provides information technology, consultant and business process services. It is one of the leading Big Tech companies','1945','897.6 billion INR','2,858 Cr',0,0,'text','text','text'],
                    'Titan Company Limited':['TITAN.NS','Titan Company Limited is an Indian company that mainly manufactures fashion accessories such as jewellery, watches and eyewear. Part of the Tata Group and started as a joint venture with TIDCO, the company has its corporate headquarters in Electronic City, Bangalore, and registered office in Hosur, Tamil Nadu','1984','516.2 billion INR','771 Cr',0,0,'text','text','text'],
@@ -34,7 +34,7 @@ nifty_companies = {'Asian Paints':['ASIANPAINT.NS','Asian Paints Ltd is an India
                    'Cipla Limited':['CIPLA.NS','Cipla Limited is an Indian multinational pharmaceutical company headquartered in Mumbai. Cipla primarily focuses on developing medication to treat respiratory disease, cardiovascular disease, arthritis, diabetes, depression, and various other medical conditions','1935','227.5 billion INR','932 Cr',0,0,'text','text','text'],
                    'Grasim Industries Limited':['GRASIM.NS','Grasim Industries Limited is an Indian manufacturing company based in Mumbai. Since its inception in 1947 as a textile manufacturer, Grasim has diversified into textile raw materials like viscose stapl','1947','1.212 trillion INR','2,722 Cr',0,0,'text','text','text'],
                    'Hindustan Unilever Limited':['HINDUNILVR.NS','Hindustan Unilever Limited is a British-owned Indian final good company headquartered in Mumbai. It is a subsidiary of the British company Unilever. Its products include foods, beverages, cleaning agents, personal care products, water purifiers and other fast-moving consumer goods.','1933','627.1 billion INR','2,561 Cr',0,0,'text','text','text'],
-                   'MAHINDRA &MAHINDRA':['M&M.NS','Mahindra & Mahindra is an automobile manufacturing company headquartered in Mumbai, Maharashtra. It was established in 1945 as Mahindra & Mohammed and later renamed Mahindra & Mahindra. Part of the Mahindra Group, M&M is one of the largest vehicle manufacturers by production in India.','1945','1.225 trillion INR','3,125 Cr',0,0,'text','text','text'],
+                   'MAHINDRA &amp;MAHINDRA':['M&M.NS','Mahindra & Mahindra is an automobile manufacturing company headquartered in Mumbai, Maharashtra. It was established in 1945 as Mahindra & Mohammed and later renamed Mahindra & Mahindra. Part of the Mahindra Group, M&M is one of the largest vehicle manufacturers by production in India.','1945','1.225 trillion INR','3,125 Cr',0,0,'text','text','text'],
                    'Tata Motors Limited':['TATAMOTORS.NS','Tata Motors Limited is an Indian multinational automotive company, headquartered in Mumbai and part of the Tata Group. The company produces cars, trucks, vans, and busses. Subsidiaries include British Jaguar Land Rover and South Korean Tata Daewoo','1945','4.439 trillion INR','17,529 Cr',0,0,'text','text','text'],
                    'Apollo Hospitals Enterprise Limited':['APOLLOHOSP.NS','Apollo Hospitals Enterprise Limited is an Indian multinational healthcare group headquartered in Chennai. It is the largest for-profit private hospital network in India, with a network of 71 owned and managed hospitals','1982',' 166.1 billion INR','254 Cr',0,0,'text','text','text'],
                    'State Bank of India':['SBIN.NS','State Bank of India is an Indian multinational public sector bank and financial services statutory body headquartered in Mumbai, Maharashtra','1955','918.79B','69,543 Cr',0,0,'text','text','text'],
@@ -115,7 +115,7 @@ def my_cron_job():
                    'Britannia Industries Limited',
                    'Nestlé India Limited',
                    'Hindalco Industries Limited',
-                   'Larsen & Toubro Limited',
+                   'Larsen &amp; Toubro Limited',
                    'Tata Consumer Products Limited',
                    'Wipro Limited',
                    'Titan Company Limited',
@@ -131,7 +131,7 @@ def my_cron_job():
                    'Cipla Limited',
                    'Grasim Industries Limited',
                    'Hindustan Unilever Limited',
-                   'MAHINDRA &MAHINDRA',
+                   'MAHINDRA &amp;MAHINDRA',
                    'Tata Motors Limited',
                    'Apollo Hospitals Enterprise Limited',
                    'State Bank of India',
@@ -215,7 +215,7 @@ def my_cron_job():
 # my_cron_job()
 # print(nifty_companies)
 skip=True
-if  skip:
+if not skip:
     my_cron_job()
     file_1 = open('C:/Users/Kevin Jacob/Desktop/Project/data.txt', 'wt',encoding='utf-8') 
     file_1.write(str(nifty_companies))

@@ -274,9 +274,20 @@ from cronjob import nifty_companies
 def model(request):
     #cls=joblib.load('model_final.sav')
     #cls.predict()
-    with open('C:/Users/Kevin Jacob/Desktop/Project/data.txt','r',encoding='utf-8') as f: 
-        data = f.read() 
-    js = ast.literal_eval(data) 
-    ls=js[c_name]
-    return render(request,"login/model.html",{'ans':ls[5],'bs1':ls[7],'bs2':ls[8],'bs3':ls[9],'c_name':c_name,'cp':ls[6],'desc':ls[1],'datefounded':ls[2],'rev':ls[3],'profit':ls[4]})
+    if request.user.is_authenticated:
+        request.session['test'] = 'Session is working'
+        test_value = request.session.get('test')
+        with open('C:/Users/Kevin Jacob/Desktop/Project/data.txt','r',encoding='utf-8') as f: 
+            data = f.read() 
+        js = ast.literal_eval(data) 
+        ls=js[c_name]
+        cname=c_name.replace('&amp;','&')
+        return render(request,"login/model.html",{'ans':ls[5],'bs1':ls[7],'bs2':ls[8],'bs3':ls[9],'c_name':cname,'cp':ls[6],'desc':ls[1],'datefounded':ls[2],'rev':ls[3],'profit':ls[4]})
+    else:
+        return redirect('log_m')
+    # with open('C:/Users/Kevin Jacob/Desktop/Project/data.txt','r',encoding='utf-8') as f: 
+    #     data = f.read() 
+    # js = ast.literal_eval(data) 
+    # ls=js[c_name]
+    # return render(request,"login/model.html",{'ans':ls[5],'bs1':ls[7],'bs2':ls[8],'bs3':ls[9],'c_name':c_name,'cp':ls[6],'desc':ls[1],'datefounded':ls[2],'rev':ls[3],'profit':ls[4]})
 
